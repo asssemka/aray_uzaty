@@ -21,12 +21,11 @@
 }
 
 .invitation-header {
-    min-height: 35vh;
-    /* минимальная высота */
+    min-height: 40vh;
+    /* немного выше для воздуха */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* центрируем текст по вертикали */
     align-items: center;
     text-align: center;
     padding: 0 20px 20px 20px;
@@ -34,58 +33,58 @@
 
 .header-title {
     font-family: 'Dancing Script', 'Cormorant Garamond', serif;
-    /* каллиграфический шрифт */
-    font-size: clamp(2.5rem, 5vw, 3rem);
-    /* адаптивный размер */
+    font-size: clamp(3rem, 6vw, 3.8rem);
+    /* больше и наряднее */
     font-weight: 600;
     color: #133275;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
 }
 
 .header-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    /* адаптивный размер */
+    font-size: clamp(1.7rem, 2.6vw, 1.9rem);
+    /* увеличен основной текст */
     color: #133275;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
-    max-width: 700px;
-    line-height: 1.5;
+    max-width: 750px;
+    line-height: 1.7;
+    /* более воздушно */
 }
-
 
 .highlight {
     font-weight: bold;
     color: #133275;
-    /* убрали желтый */
 }
 
 .hosts {
     border-top: 1px solid #cce0ff;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
 
 .hosts-label {
     font-family: 'Cormorant Garamond', serif;
     color: #0b1c42;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    /* было 1.8rem */
+    margin-bottom: 12px;
 }
 
 .hosts-names {
     font-family: 'Cormorant Garamond', serif;
     color: #133275;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    /* было 2.5rem */
     font-weight: bold;
 }
 
 .hosts-dots span {
     display: inline-block;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    margin: 0 4px;
+    margin: 0 5px;
 }
 
 .hosts-dots span:nth-child(1),
@@ -98,8 +97,7 @@
 }
 
 .main-content {
-    padding: 40px 30px 120px 30px;
-    /* больше места снизу для декоративного фото */
+    padding: 50px 30px 130px 30px;
     text-align: center;
 }
 
@@ -107,39 +105,41 @@
 .location-label {
     font-family: 'Cormorant Garamond', serif;
     color: #555;
-    font-size: 1rem;
-    margin-bottom: 8px;
+    font-size: 1.2rem;
+    /* было 1rem */
+    margin-bottom: 10px;
 }
 
 .date-value {
     font-family: 'Dancing Script', 'Cormorant Garamond', serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
+    /* было 3rem */
     color: #133275;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .location-value {
     font-family: 'Dancing Script', 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    /* было 1.8rem */
     color: #133275;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .line {
     height: 2px;
     background: linear-gradient(to right, transparent, #133275, transparent);
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 /* Декоративная нижняя фотография - венок */
 .footer-image {
     position: absolute;
-    bottom: 10px;
-    /* чуть выше края */
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 300px;
-    /* маленькая декоративная */
+    width: 340px;
+    /* чуть больше */
     height: auto;
     object-fit: contain;
     z-index: 5;

@@ -100,7 +100,7 @@ const styles = `
 
 .rsvp-title {
   font-family: 'Dancing Script', 'Cormorant Garamond', serif;
-  font-size: 34px;
+  font-size: 42px; /* уменьшили */
   text-align: center;
   margin-bottom: 25px;
   color: #2c3e50;
@@ -134,7 +134,7 @@ const styles = `
 .rsvp-form input,
 .rsvp-form select {
   padding: 14px 16px;
-  font-size: 16px;
+  font-size: 18px; /* чуть больше для удобства */
   border: 1px solid #dcdfe3;
   border-radius: 12px;
   outline: none;
@@ -156,7 +156,7 @@ const styles = `
   border-radius: 12px;
   background: linear-gradient(90deg, #133275, #133275);
   color: #fff;
-  font-size: 20px;
+  font-size: 22px; /* удобный размер */
   font-family: 'Dancing Script', 'Cormorant Garamond', serif;
   cursor: pointer;
   transition: background 0.3s, transform 0.1s;
@@ -176,14 +176,14 @@ const styles = `
     padding: 20px 18px;
   }
   .rsvp-title {
-    font-size: 28px;
+    font-size: 32px; /* уменьшаем на мобильных */
   }
   .rsvp-form input,
   .rsvp-form select {
-    font-size: 15px;
+    font-size: 16px;
   }
   .submit-btn {
-    font-size: 18px;
+    font-size: 20px;
     padding: 14px;
   }
 }

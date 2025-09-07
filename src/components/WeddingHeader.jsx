@@ -21,7 +21,7 @@ function WeddingHeader() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="mb-3 md:mb-4"
                 >
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-[0.2em] uppercase"
+                    <h1 className="text-9xl md:text-5xl lg:text-6xl font-semibold tracking-[0.2em] uppercase"
                         style={{
                             color: '#133275ff',
                             fontFamily: "'Cormorant Garamond', serif",
@@ -29,7 +29,7 @@ function WeddingHeader() {
                             fontWeight: '600'
                         }}>
                         QYZ U'ZATU
-                    </h2>
+                    </h1>
                 </motion.div>
 
                 {/* Дата - увеличенная до такого же размера */}
@@ -38,7 +38,7 @@ function WeddingHeader() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                    <div className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.15em]"
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.15em]"
                         style={{
                             color: '#133275ff',
                             fontFamily: "'Cormorant Garamond', serif",
@@ -46,7 +46,7 @@ function WeddingHeader() {
                             fontWeight: '900'
                         }}>
                         04 | 10 | 2025
-                    </div>
+                    </h2>
                 </motion.div>
             </div>
 

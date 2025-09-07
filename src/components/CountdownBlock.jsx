@@ -26,39 +26,52 @@ function CountdownBlock() {
     }
 
     useEffect(() => {
-        const timer = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
+        const timer = setInterval(() => {
+            setTimeLeft(getTimeLeft());
+        }, 1000);
+
         return () => clearInterval(timer);
     }, []);
 
     return (
         <section className="py-12 text-center relative">
             {/* Птицы */}
-            <img src={bird1} alt="bird top left" className="absolute" style={{ top: "-30px", left: "-20px", width: "80px", height: "80px" }} />
-            <img src={bird2} alt="bird bottom right" className="absolute" style={{ bottom: "-50px", right: "0px", width: "60px", height: "60px" }} />
+            <img
+                src={bird1}
+                alt="bird top left"
+                className="absolute"
+                style={{ top: "-30px", left: "-20px", width: "80px", height: "80px" }}
+            />
+            <img
+                src={bird2}
+                alt="bird bottom right"
+                className="absolute"
+                style={{ bottom: "-50px", right: "0px", width: "60px", height: "60px" }}
+            />
 
             {/* Подпись таймера */}
             <h4
-                className="text-4xl md:text-6xl font-bold mb-8"
+                className="text-7xl font-bold mb-8"
                 style={{
                     color: "#133275",
                     fontFamily: "'Dancing Script', 'Cormorant Garamond', serif",
                 }}
             >
-                {t("countdownLabel")}
+                {t("Ұзату тойына дейін:")}
             </h4>
 
             {/* Таймер */}
             <h1
-                className="text-2xl md:text-3xl font-bold mb-8"
+                className="text-3xl font-bold mb-8"
                 style={{
                     color: "#133275",
                     fontFamily: "'Dancing Script', 'Cormorant Garamond', serif",
                 }}
             >
-                {String(timeLeft.days).padStart(2, "0")} {t("days")} :{" "}
-                {String(timeLeft.hours).padStart(2, "0")} {t("hours")} :{" "}
-                {String(timeLeft.minutes).padStart(2, "0")} {t("minutes")} :{" "}
-                {String(timeLeft.seconds).padStart(2, "0")} {t("seconds")}
+                {String(timeLeft.days).padStart(2, "0")} күн :{" "}
+                {String(timeLeft.hours).padStart(2, "0")} сағ :{" "}
+                {String(timeLeft.minutes).padStart(2, "0")} мин :{" "}
+                {String(timeLeft.seconds).padStart(2, "0")} с
             </h1>
         </section>
     );

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Cormorant+Garamond:wght@400;600&family=Roboto:wght@400;700&display=swap&subset=cyrillic');
+
 .invitation-container {
     position: relative;
     min-height: 100vh;
@@ -22,7 +24,6 @@
 
 .invitation-header {
     min-height: 40vh;
-    /* немного выше для воздуха */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,9 +33,9 @@
 }
 
 .header-title {
-    font-family: 'Dancing Script', 'Cormorant Garamond', serif;
-    font-size: clamp(3rem, 6vw, 3.8rem);
-    /* больше и наряднее */
+    font-family: 'Dancing Script', 'Cormorant Garamond', 'Roboto', serif;
+    font-size: clamp(3rem, 5vw, 4rem);
+    /* крупнее, но комфортно */
     font-weight: 600;
     color: #133275;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -42,14 +43,12 @@
 }
 
 .header-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.7rem, 2.6vw, 1.9rem);
-    /* увеличен основной текст */
+    font-family: 'Cormorant Garamond', 'Roboto', serif;
+    font-size: clamp(1.8rem, 2.5vw, 2rem);
     color: #133275;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
     max-width: 750px;
-    line-height: 1.7;
-    /* более воздушно */
+    line-height: 1.8;
 }
 
 .highlight {
@@ -64,18 +63,16 @@
 }
 
 .hosts-label {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Roboto', serif;
     color: #0b1c42;
-    font-size: 2rem;
-    /* было 1.8rem */
+    font-size: 2.2rem;
     margin-bottom: 12px;
 }
 
 .hosts-names {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Roboto', serif;
     color: #133275;
-    font-size: 2.8rem;
-    /* было 2.5rem */
+    font-size: 3rem;
     font-weight: bold;
 }
 
@@ -103,25 +100,22 @@
 
 .date-label,
 .location-label {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Roboto', serif;
     color: #555;
-    font-size: 1.2rem;
-    /* было 1rem */
+    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
 .date-value {
-    font-family: 'Dancing Script', 'Cormorant Garamond', serif;
-    font-size: 3.5rem;
-    /* было 3rem */
+    font-family: 'Dancing Script', 'Cormorant Garamond', 'Roboto', serif;
+    font-size: 3.8rem;
     color: #133275;
     margin-bottom: 15px;
 }
 
 .location-value {
-    font-family: 'Dancing Script', 'Cormorant Garamond', serif;
-    font-size: 2.2rem;
-    /* было 1.8rem */
+    font-family: 'Dancing Script', 'Cormorant Garamond', 'Roboto', serif;
+    font-size: 2.4rem;
     color: #133275;
     margin-bottom: 25px;
 }
@@ -132,14 +126,12 @@
     margin-top: 15px;
 }
 
-/* Декоративная нижняя фотография - венок */
 .footer-image {
     position: absolute;
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 340px;
-    /* чуть больше */
+    width: 360px;
     height: auto;
     object-fit: contain;
     z-index: 5;

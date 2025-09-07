@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
 import { useTranslation, Trans } from "react-i18next";
-
-import './Invitation.css'; // создадим отдельный CSS файл
+import './Invitation.css';
 
 export default function Invitation() {
     const { t } = useTranslation();
     return (
         <div className="invitation-container">
             <div className="invitation-card">
-                {/* Верхний блок с текстом */}
                 <div className="invitation-header">
                     <motion.h2
                         initial={{ opacity: 0, y: -20 }}
@@ -29,7 +27,6 @@ export default function Invitation() {
                     </motion.p>
                 </div>
 
-                {/* Той иелері */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -43,7 +40,6 @@ export default function Invitation() {
                     </div>
                 </motion.div>
 
-                {/* Основной контент */}
                 <div className="main-content">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -75,7 +71,6 @@ export default function Invitation() {
                 </div>
             </div>
 
-            {/* Фото снизу поверх контента */}
             <img src="/de.png" alt="Wedding Decorative" className="footer-image" />
         </div>
     )

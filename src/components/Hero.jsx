@@ -26,7 +26,7 @@ function Hero() {
             <div className="overlay"></div>
 
             <audio ref={audioRef} loop>
-                <source src="/music.mp3" type="audio/mpeg" />
+                <source src="/music2.mp3" type="audio/mpeg" />
             </audio>
 
             {/* <div className="hero-content">

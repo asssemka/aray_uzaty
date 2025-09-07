@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 // Подключаем шрифты
 if (typeof document !== "undefined") {
@@ -10,6 +11,7 @@ if (typeof document !== "undefined") {
 }
 
 export default function RSVPForm() {
+    const { t } = useTranslation();
     const [submitted, setSubmitted] = useState(false);
     const formRef = useRef(null);
     const iframeRef = useRef(null);
@@ -29,41 +31,39 @@ export default function RSVPForm() {
     return (
         <section className="rsvp-section">
             <div className="rsvp-container">
-                <h2 className="rsvp-title">Ұзату тойына келуді растайсыз ба?</h2>
+                <h2 className="rsvp-title">{t("rsvpTitle")}</h2>
 
-                {submitted && (
-                    <div className="rsvp-success">Жауабыңыз қабылданды! Рахмет!</div>
-                )}
+                {submitted && <div className="rsvp-success">{t("rsvpSuccess")}</div>}
 
                 <form
                     ref={formRef}
-                    action="https://script.google.com/macros/s/AKfycbzPj9OwcE3g2QMg7veNemC8riGJBEd0TtCHbFkyzQ0wdIRDdRDww5RUR2HmJ1LdUbt4/exec"
+                    action="https://script.google.com/macros/s/AKfycbwtBU_sfbgW0nmw0k7z7KnlcTPzD5FcywKucdqUJJ-gCfqb75VauKXNxJDDhr2U0pmI/exec"
                     method="POST"
                     target="hidden_iframe"
                     onSubmit={onSubmit}
                     className="rsvp-form"
                 >
                     <div className="form-group">
-                        <label>Аты-жөніңіз:</label>
+                        <label>{t("nameLabel")}</label>
                         <input
                             name="name"
                             type="text"
                             required
-                            placeholder="Толығымен жазыңыз"
+                            placeholder={t("namePlaceholder")}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label>Қатысасыз ба?</label>
+                        <label>{t("attendLabel")}</label>
                         <select name="attend" required>
-                            <option value="">Таңдаңыз...</option>
-                            <option value="Келемін">Иә, қатысамын</option>
-                            <option value="Келе алмаймын">Қатыса алмаймын</option>
+                            <option value="">{t("chooseOption")}</option>
+                            <option value="Иә, қатысамын">{t("attendYes")}</option>
+                            <option value="Жоқ, қатыса алмаймын">{t("attendNo")}</option>
                         </select>
                     </div>
 
                     <button type="submit" className="submit-btn">
-                        Жауап жіберу
+                        {t("submit")}
                     </button>
                 </form>
             </div>
@@ -78,6 +78,7 @@ export default function RSVPForm() {
         </section>
     );
 }
+
 
 /* CSS */
 const styles = `

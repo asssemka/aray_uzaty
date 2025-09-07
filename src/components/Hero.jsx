@@ -13,7 +13,6 @@ function Hero() {
     const toggleMusic = () => {
         if (!audioRef.current) return;
 
-        // Если музыка ещё не играет, установить начальное время 28 секунд
         if (!isPlaying) {
             audioRef.current.currentTime = 28; // старт с 28-й секунды
             audioRef.current.play();
@@ -24,6 +23,9 @@ function Hero() {
         setIsPlaying(!isPlaying);
     };
 
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+    };
 
     return (
         <section className="hero-section">
@@ -32,15 +34,6 @@ function Hero() {
             <audio ref={audioRef} loop>
                 <source src="/music.mp3" type="audio/mpeg" />
             </audio>
-
-            {/* <div className="hero-content">
-                <h1>Құрметті қонақтар!</h1>
-                <p>
-                    Аяулы қызымыз <span className="highlight">Арайдың</span> ата-анасының
-                    аялы алақанынан – құтты босағасына шығарып салу рәсіміне арналған
-                    салтанатты дастарханымыздың қадірлі қонағы болуға шақырамыз!
-                </p>
-            </div> */}
 
             <div className="music-button-container">
                 <button

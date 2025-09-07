@@ -12,14 +12,18 @@ function Hero() {
 
     const toggleMusic = () => {
         if (!audioRef.current) return;
-        if (isPlaying) audioRef.current.pause();
-        else audioRef.current.play();
+
+        // Если музыка ещё не играет, установить начальное время 28 секунд
+        if (!isPlaying) {
+            audioRef.current.currentTime = 28; // старт с 28-й секунды
+            audioRef.current.play();
+        } else {
+            audioRef.current.pause();
+        }
+
         setIsPlaying(!isPlaying);
     };
 
-    const changeLanguage = (lang) => {
-        i18n.changeLanguage(lang);
-    };
 
     return (
         <section className="hero-section">

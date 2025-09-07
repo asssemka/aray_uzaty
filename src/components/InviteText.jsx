@@ -7,6 +7,7 @@ export default function Invitation() {
     return (
         <div className="invitation-container">
             <div className="invitation-card">
+                {/* Верхний блок с текстом */}
                 <div className="invitation-header">
                     <motion.h2
                         initial={{ opacity: 0, y: -20 }}
@@ -23,10 +24,15 @@ export default function Invitation() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="header-text"
                     >
-                        <Trans i18nKey="inviteText" components={{ 1: <span className="highlight" /> }} />
+                        {/* Используем именованный тег highlight вместо <1> */}
+                        <Trans
+                            i18nKey="inviteText"
+                            components={{ highlight: <span className="highlight" /> }}
+                        />
                     </motion.p>
                 </div>
 
+                {/* Той иелері */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -40,6 +46,7 @@ export default function Invitation() {
                     </div>
                 </motion.div>
 
+                {/* Основной контент */}
                 <div className="main-content">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -59,7 +66,7 @@ export default function Invitation() {
                         className="location-section"
                     >
                         <p className="location-label">{t("locationLabel")}</p>
-                        <h2 className="location-value">Life Garden Restaurant</h2>
+                        <h2 className="location-value">{t("locationValue")}</h2>
                         <iframe
                             src="https://widgets.2gis.com/widget?type=firmsonmap&options=%7B%22pos%22%3A%7B%22lat%22%3A42.359495%2C%22lon%22%3A69.520749%2C%22zoom%22%3A16%7D%2C%22opt%22%3A%7B%22city%22%3A%22shymkent%22%7D%2C%22org%22%3A%2270000001082729768%22%7D"
                             width="100%"

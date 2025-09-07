@@ -1,9 +1,27 @@
 import { motion } from "framer-motion";
-import { useTranslation, Trans } from "react-i18next";
-import './Invitation.css';
+import { useTranslation } from "react-i18next";
+import "./Invitation.css";
 
 export default function Invitation() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const lang = i18n.language;
+
+    // Тексты напрямую (без <Trans>)
+    const texts = {
+        kk: {
+            headerTitle: "Құрметті қонақтар!",
+            inviteText:
+                "Аяулы қызымыз Арайдың ата-анасының аялы алақанынан – құтты босағасына шығарып салу рәсіміне арналған салтанатты дастарханымыздың қадірлі қонағы болуға шақырамыз!",
+        },
+        ru: {
+            headerTitle: "Дорогие гости!",
+            inviteText:
+                "Приглашаем вас стать нашими почётными гостями на торжественном ужине, посвящённом проводам нашей любимой дочери Арай из родительского дома.",
+        },
+    };
+
+    const content = texts[lang] || texts.kk;
+
     return (
         <div className="invitation-container">
             <div className="invitation-card">
@@ -15,7 +33,7 @@ export default function Invitation() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="header-title"
                     >
-                        {t("headerTitle")}
+                        {content.headerTitle}
                     </motion.h2>
 
                     <motion.p
@@ -24,11 +42,7 @@ export default function Invitation() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="header-text"
                     >
-                        {/* Используем именованный тег highlight вместо <1> */}
-                        <Trans
-                            i18nKey="inviteText"
-                            components={{ highlight: <span className="highlight" /> }}
-                        />
+                        {content.inviteText}
                     </motion.p>
                 </div>
 
@@ -42,7 +56,9 @@ export default function Invitation() {
                     <p className="hosts-label">{t("hostsLabel")}</p>
                     <p className="hosts-names">{t("hostsNames")}</p>
                     <div className="hosts-dots">
-                        <span></span><span></span><span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </motion.div>
 
@@ -80,5 +96,5 @@ export default function Invitation() {
 
             <img src="/de.png" alt="Wedding Decorative" className="footer-image" />
         </div>
-    )
+    );
 }

@@ -40,13 +40,13 @@ function CountdownBlock() {
                 src={bird1}
                 alt="bird top left"
                 className="absolute"
-                style={{ top: "-30px", left: "0px", width: "80px", height: "80px" }}
+                style={{ top: "-30px", left: "-20px", width: "80px", height: "80px" }}
             />
             <img
                 src={bird2}
                 alt="bird bottom right"
                 className="absolute"
-                style={{ bottom: "-30px", right: "0px", width: "80px", height: "80px" }}
+                style={{ bottom: "-50px", right: "0px", width: "60px", height: "60px" }}
             />
 
             {/* Подпись таймера */}

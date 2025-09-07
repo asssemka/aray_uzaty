@@ -11,9 +11,9 @@ function App() {
       <WeddingHeader />
       <Hero />
       <InviteText />
-      <CountdownBlock />
       <RSVPForm />
-      <Footer />
+      <CountdownBlock />
+
     </div>
   );
 }

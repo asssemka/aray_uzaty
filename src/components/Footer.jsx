@@ -1,20 +1,17 @@
 import { useTranslation } from "react-i18next";
-import footerImage from "../assets/footer.jpg";
+import "./Footer.css";
 
 function Footer() {
     const { t } = useTranslation();
 
     return (
-        <footer className="relative w-full bg-gray-900 text-white">
-            {/* Фон через div + background-image */}
-            <div
-                className="w-full min-h-[250px] bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${footerImage})` }}
-            >
-                {/* Полупрозрачный overlay для текста */}
-                <div className="w-full h-full bg-black bg-opacity-40 flex items-center justify-center">
-
-                </div>
+        <footer className="footer">
+            <div className="footer-content">
+                <p className="footer-text">
+                    Құрметті қонақтар! <br />
+                    Тойымызға келіп, қуанышымызды бөліскеніңіз үшін рахмет. <br />
+                    Сіздерге махаббат, бақыт және амандық тілейміз!
+                </p>
             </div>
         </footer>
     );

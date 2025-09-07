@@ -1,0 +1,142 @@
+.invitation-container {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #ffecb3, #ffffff, #ffe4e1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.invitation-card {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    overflow: hidden;
+}
+
+.invitation-header {
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+}
+
+.header-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    /* уменьшили */
+    font-weight: 600;
+    color: #133275;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 0 10px 0;
+}
+
+.header-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    /* уменьшили */
+    color: #133275;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+    max-width: 700px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #133275;
+    /* убрали желтый */
+}
+
+.hosts {
+    border-top: 1px solid #cce0ff;
+    padding: 20px;
+    text-align: center;
+}
+
+.hosts-label {
+    font-family: 'Cormorant Garamond', serif;
+    color: #0b1c42;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.hosts-names {
+    font-family: 'Cormorant Garamond', serif;
+    color: #133275;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hosts-dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.hosts-dots span:nth-child(1),
+.hosts-dots span:nth-child(3) {
+    background: #133275;
+}
+
+.hosts-dots span:nth-child(2) {
+    background: #0b1c42;
+}
+
+.main-content {
+    padding: 40px 30px 120px 30px;
+    /* больше места снизу для декоративного фото */
+    text-align: center;
+}
+
+.date-label,
+.location-label {
+    font-family: 'Cormorant Garamond', serif;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.date-value {
+    font-family: 'Dancing Script', 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: #133275;
+    margin-bottom: 10px;
+}
+
+.location-value {
+    font-family: 'Dancing Script', 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: #133275;
+    margin-bottom: 20px;
+}
+
+.line {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #133275, transparent);
+    margin-top: 10px;
+}
+
+/* Декоративная нижняя фотография - венок */
+.footer-image {
+    position: absolute;
+    bottom: 10px;
+    /* чуть выше края */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    /* маленькая декоративная */
+    height: auto;
+    object-fit: contain;
+    z-index: 5;
+    pointer-events: none;
+}
